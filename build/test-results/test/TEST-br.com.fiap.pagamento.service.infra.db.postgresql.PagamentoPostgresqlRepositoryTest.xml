@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.fiap.pagamento.service.infra.db.postgresql.PagamentoPostgresqlRepositoryTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-12-03T00:07:56" hostname="DESKTOP-FELIPE" time="0.14">
+  <properties/>
+  <testcase name="shouldReturnPagamentoWhenGetIsCalledWithExistingId()" classname="br.com.fiap.pagamento.service.infra.db.postgresql.PagamentoPostgresqlRepositoryTest" time="0.117"/>
+  <testcase name="shouldReturnNullWhenFindTopByReferenceIsCalledWithNonExistingReference()" classname="br.com.fiap.pagamento.service.infra.db.postgresql.PagamentoPostgresqlRepositoryTest" time="0.004"/>
+  <testcase name="shouldReturnNullWhenGetIsCalledWithNonExistingId()" classname="br.com.fiap.pagamento.service.infra.db.postgresql.PagamentoPostgresqlRepositoryTest" time="0.005"/>
+  <testcase name="shouldReturnPagamentoWhenFindTopByReferenceIsCalledWithExistingReference()" classname="br.com.fiap.pagamento.service.infra.db.postgresql.PagamentoPostgresqlRepositoryTest" time="0.005"/>
+  <testcase name="shouldReturnSavedPagamentoWhenSaveIsCalled()" classname="br.com.fiap.pagamento.service.infra.db.postgresql.PagamentoPostgresqlRepositoryTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

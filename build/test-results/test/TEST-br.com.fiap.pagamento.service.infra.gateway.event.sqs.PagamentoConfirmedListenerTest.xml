@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.fiap.pagamento.service.infra.gateway.event.sqs.PagamentoConfirmedListenerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-12-03T00:07:56" hostname="DESKTOP-FELIPE" time="0.226">
+  <properties/>
+  <testcase name="shouldLogMessageWhenReceiveMessageIsCalled()" classname="br.com.fiap.pagamento.service.infra.gateway.event.sqs.PagamentoConfirmedListenerTest" time="0.226"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

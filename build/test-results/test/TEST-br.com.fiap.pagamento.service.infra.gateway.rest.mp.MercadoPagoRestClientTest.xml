@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.fiap.pagamento.service.infra.gateway.rest.mp.MercadoPagoRestClientTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-12-03T00:07:57" hostname="DESKTOP-FELIPE" time="0.447">
+  <properties/>
+  <testcase name="shouldReturnNullWhenGetPaymentIsCalledAndExceptionOccurs()" classname="br.com.fiap.pagamento.service.infra.gateway.rest.mp.MercadoPagoRestClientTest" time="0.402"/>
+  <testcase name="shouldReturnPagamentoGatewayWhenGetPaymentIsCalled()" classname="br.com.fiap.pagamento.service.infra.gateway.rest.mp.MercadoPagoRestClientTest" time="0.012"/>
+  <testcase name="shouldReturnQrDataWhenCreateIsCalled()" classname="br.com.fiap.pagamento.service.infra.gateway.rest.mp.MercadoPagoRestClientTest" time="0.031"/>
+  <system-out><![CDATA[2024-12-02T21:07:57.990-03:00 ERROR 35656 --- [    Test worker] b.c.f.p.s.i.g.r.m.MercadoPagoRestClient  : null
+2024-12-02T21:07:58.003-03:00  INFO 35656 --- [    Test worker] b.c.f.p.s.i.g.r.m.MercadoPagoRestClient  : response payment mp: <200 OK OK,PaymentsResponse(id=100, externalReference=1, status=PAGO),[]>
+2024-12-02T21:07:58.036-03:00  INFO 35656 --- [    Test worker] b.c.f.p.s.i.g.r.m.MercadoPagoRestClient  : response order mp: <200 OK OK,QuickResponse(qrData=qrData, inStoreOrderId=inStoreOrderId),[]>
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

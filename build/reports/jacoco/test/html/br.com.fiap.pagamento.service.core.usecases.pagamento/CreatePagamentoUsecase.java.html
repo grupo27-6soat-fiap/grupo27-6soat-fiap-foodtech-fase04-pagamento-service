@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CreatePagamentoUsecase.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">pagamento-service</a> &gt; <a href="index.source.html" class="el_package">br.com.fiap.pagamento.service.core.usecases.pagamento</a> &gt; <span class="el_source">CreatePagamentoUsecase.java</span></div><h1>CreatePagamentoUsecase.java</h1><pre class="source lang-java linenums">package br.com.fiap.pagamento.service.core.usecases.pagamento;
+
+import br.com.fiap.pagamento.service.core.domain.entities.Pagamento;
+import br.com.fiap.pagamento.service.core.domain.enums.StatusEnum;
+import br.com.fiap.pagamento.service.core.usecases.ports.gateways.PaymentGatewayPort;
+import br.com.fiap.pagamento.service.core.usecases.ports.repositories.PagamentoRepositoryPort;
+import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+
+@Service
+@Transactional
+@RequiredArgsConstructor
+public class CreatePagamentoUsecase {
+
+	private final PagamentoRepositoryPort pagamentoRepositoryPort;
+
+	private final PaymentGatewayPort paymentGatewayPort;
+
+	public Pagamento create(Pagamento pagamento, String type) {
+<span class="fc" id="L22">		Pagamento pag = pagamentoRepositoryPort.findTopByReference(pagamento.getReference());</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">		if(pag!=null)</span>
+<span class="fc" id="L24">			return pag;</span>
+<span class="fc" id="L25">		pagamento.setStatus(StatusEnum.CREATED);</span>
+<span class="fc" id="L26">		Pagamento  pagamentoCreated= pagamentoRepositoryPort.save(pagamento);</span>
+<span class="fc" id="L27">		pagamentoCreated.setQrcode(getQrcode(pagamento, pagamentoCreated, type));</span>
+<span class="fc" id="L28">		pagamentoCreated.setStatus(StatusEnum.PENDING);</span>
+<span class="fc" id="L29">		Pagamento pagamentoPending = pagamentoRepositoryPort.save(pagamentoCreated);</span>
+<span class="fc" id="L30">		return pagamentoRepositoryPort.save(pagamentoPending);</span>
+	}
+
+	private String getQrcode(Pagamento pagamento, Pagamento pagamentoCreated, String type) {
+<span class="pc bpc" id="L34" title="3 of 4 branches missed.">		if (type==null || !type.equals(&quot;sandbox&quot;)) {</span>
+<span class="fc" id="L35">			return paymentGatewayPort.create(pagamentoCreated.getId().toString(), pagamento.getValor());</span>
+		}
+<span class="nc" id="L37">		return &quot;00020101021226940014BR.GOV.BCB.PIX2572pix-qr.mercadopago.com/instore/o/v2/c6482d96-e063-4f9d-b66e-9331347a468b5204000053039865802BR5915linkpagoproduct6009SAO PAULO62070503***630445F5&quot;;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

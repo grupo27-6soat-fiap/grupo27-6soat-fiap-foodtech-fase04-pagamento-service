@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.fiap.pagamento.service.core.usecases.pagamento.CreatePagamentoUsecaseTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-12-03T00:07:55" hostname="DESKTOP-FELIPE" time="0.014">
+  <properties/>
+  <testcase name="shouldCreateNewPaymentWhenReferenceNotFound()" classname="br.com.fiap.pagamento.service.core.usecases.pagamento.CreatePagamentoUsecaseTest" time="0.009"/>
+  <testcase name="shouldReturnExistingPaymentWhenReferenceFound()" classname="br.com.fiap.pagamento.service.core.usecases.pagamento.CreatePagamentoUsecaseTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

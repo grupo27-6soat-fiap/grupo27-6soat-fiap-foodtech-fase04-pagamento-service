@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.fiap.pagamento.service.infra.db.entities.PagamentoEntityTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-12-03T00:07:56" hostname="DESKTOP-FELIPE" time="0.013">
+  <properties/>
+  <testcase name="shouldSetAndGetValor()" classname="br.com.fiap.pagamento.service.infra.db.entities.PagamentoEntityTest" time="0.0"/>
+  <testcase name="shouldSetAndGetAlteracao()" classname="br.com.fiap.pagamento.service.infra.db.entities.PagamentoEntityTest" time="0.004"/>
+  <testcase name="shouldSetAndGetReference()" classname="br.com.fiap.pagamento.service.infra.db.entities.PagamentoEntityTest" time="0.001"/>
+  <testcase name="shouldSetAndGetQrcode()" classname="br.com.fiap.pagamento.service.infra.db.entities.PagamentoEntityTest" time="0.0"/>
+  <testcase name="shouldSetAndGetStatus()" classname="br.com.fiap.pagamento.service.infra.db.entities.PagamentoEntityTest" time="0.001"/>
+  <testcase name="shouldSetAndGetId()" classname="br.com.fiap.pagamento.service.infra.db.entities.PagamentoEntityTest" time="0.0"/>
+  <testcase name="shouldSetAndGetCriacao()" classname="br.com.fiap.pagamento.service.infra.db.entities.PagamentoEntityTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
